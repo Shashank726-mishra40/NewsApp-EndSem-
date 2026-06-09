@@ -23,3 +23,10 @@ A small deployable news search app with a serverless API route so the NewsAPI ke
 Deploy on Vercel and add `NEWS_API_KEY` in Project Settings > Environment Variables.
 
 The frontend calls `/api/news`, and `api/news.js` forwards the request to NewsAPI from the serverless function.
+
+Use these Vercel settings:
+
+- Framework Preset: `Other`
+- Build Command: leave empty
+- Output Directory: leave empty
+- Install Command: leave empty

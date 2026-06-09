@@ -35,7 +35,7 @@ server.listen(PORT, () => {
 });
 
 async function serveStaticFile(urlPath, res) {
-    const safePath = urlPath === "/" ? "/index.html" : decodeURIComponent(urlPath);
+    const safePath = urlPath === "/" ? "index.html" : decodeURIComponent(urlPath).replace(/^\/+/, "");
     const filePath = path.normalize(path.join(__dirname, safePath));
 
     if (!filePath.startsWith(__dirname) || !existsSync(filePath)) {
